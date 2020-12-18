@@ -1,0 +1,34 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<div class="container">
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div class="made-login-block">
+      <p><b>MADE-2020</b></p>
+      <p>Пожалуйста,<br>
+        войдите в систему или <br>
+        <a href="{{ url_for('register') }}">зарегистрируйтесь</a>
+      </p>
+      <div class="form-group">
+        {{ form.name.label }}
+        {{ form.name(size=16, class_="form-control") }}
+<!--        <br>-->
+<!--        {% for error in form.name.errors %}-->
+<!--        <span style="color: red;">[{{ error }}]</span>-->
+<!--        {% endfor %}-->
+      </div>
+      <div class="form-group">
+        {{ form.password.label }}
+        {{ form.password(size=16, class_="form-control") }}
+      </div>
+
+    </div>
+    <div class="text-center">
+      <input type="submit" class="btn btn-primary" value="Войти">
+    </div>
+  </form>
+</div>
+
+{% endblock %}

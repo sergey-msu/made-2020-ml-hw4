@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<div class="container">
+  <form method="post">  <!-- No action for register for now -->
+    <div class="made-register-block">
+      <div class="text-center"><p>Регистрация</p></div>
+      <div class="form-group1">
+        <label for="email" class="made-register-label">E-Mail</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div>
+        <label for="name" class="made-register-label">Имя</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div >
+        <label for="pwd" class="made-register-label">Пароль</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+      <div>
+        <label for="pwd-repeat" class="made-register-label">Повторите пароль</label>
+        <input type="password" class="form-control" id="pwd-repeat">
+      </div>
+    </div>
+    <div class="text-center">
+      <input type="submit" class="btn btn-primary made-register-button" value="Создать">
+    </div>
+  </form>
+</div>
+
+{% endblock %}

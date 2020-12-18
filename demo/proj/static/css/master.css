@@ -1,0 +1,123 @@
+.made-device{
+  height: 500px;
+  width: 300px;
+  background: black;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.made-device-screen{
+  height: 420px;
+  width: 260px;
+  background: #b1d171;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: red;
+}
+
+.made-device-button{
+  height: 40px;
+  width: 40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #454545;
+  border-radius: 25px;
+}
+
+.made-welcome-text{
+    color: #046b00;
+}
+
+.made-welcome-block{
+    margin: 50px 0 40px 10px;
+}
+
+.made-login-block{
+    margin: 20px 0 15px 0;
+}
+
+.made-register-block{
+    margin: 10px 0 0 0;
+}
+
+.made-register-label{
+    margin: 10px 0 0 0;
+}
+
+.made-register-button{
+    margin-top: 20px;
+}
+
+.made-logout-link{
+    font-size: small;
+}
+
+.made-img-block{
+    width: 180px;
+    height: 180px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+}
+
+.made-img-preview{
+    width: 180px;
+    height: 180px;
+}
+
+.made-btn-analyze{
+    margin-top: 20px;
+}
+
+.made-diseases-detected{
+    margin-bottom: 5px;
+}
+
+.made-details-table{
+    width: 100%;
+}
+
+.made-disease-td{
+    text-align: left;
+}
+
+.made-disease-pct-td{
+    text-align: right;
+}
+
+.made-img-wait{
+    width: 80px;
+    height: 80px;
+}
+
+#wait-block-id{
+    display: none;
+}
+
+#results-block-id{
+    display: none;
+}
+
+#btn-analysis-id{
+    display: none;
+}
+
+#diseases-details-id{
+    display: none;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>MADE-2020</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/master.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+    <link rel="shortcut icon" href="">
+
+    {% block css_links %}
+    {% endblock %}
+
+    {% block scripts_links %}
+    {% endblock %}
+
+  </head>
+  <body>
+    <div class='made-device'>
+      <div class='made-device-screen'>
+        <div class="text-right">
+          {% if current_user.is_authenticated %}
+          <a href="{{ url_for('logout') }}" class="made-logout-link">выйти</a>
+          {% endif %}
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+      </div>
+      <div class='made-device-button' onclick="location.href='{{url_for('welcome')}}';"></div>
+    </div>
+  </body>
+
+  <script>
+
+    {% block scripts %}
+    {% endblock %}
+
+  </script>
+
+</html>

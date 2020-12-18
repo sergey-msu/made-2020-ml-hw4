@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<div>
+  <div class="made-welcome-block">
+    <h2 class="made-welcome-text">Добро пожаловать,<br>{{ current_user.name }}!</h2>
+    <br>
+    <p>
+      <b>Polaris™</b>
+      <br>
+      Классификатор болезней риса
+    </p>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary" onclick="location.href='{{url_for('classify')}}';">Начать</button>
+  </div>
+</div>
+
+{% endblock %}

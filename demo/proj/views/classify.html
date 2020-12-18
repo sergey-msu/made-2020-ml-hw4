@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block scripts_links %}
+
+<script src="{{ url_for('static', filename='js/classify.js') }}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <!-- Image block -->
+  <div class="text-center">
+    <p>Выберите изображение для классификации</p>
+  </div>
+  <div class="made-img-block">
+    <img src="{{ url_for('static', filename='img/placeholder.png') }}" id="img-preview-id" class="made-img-preview">
+  </div>
+  <div class="text-center">
+    <form action="{{ url_for('classify') }}" enctype="multipart/form-data" method="POST">
+      <label class="btn btn-success">Фото
+        <input type="file" id="img-file-id" name="img" onchange="javascript:readImageURL(this);" hidden>
+      </label>
+      <br>
+      <a class="btn btn-primary made-btn-analyze" id="btn-analysis-id" href="javascript:classify()">Анализ</a>
+    </form>
+  </div>
+
+  <!-- Wait block -->
+  <div class="container text-center" id="wait-block-id">
+    <img src="{{ url_for('static', filename='img/wait.gif') }}" class="made-img-wait">
+  </div>
+
+  <!-- Results block -->
+  <div class="container text-center" id="results-block-id">
+  </div>
+
+</div>
+
+{% endblock %}
